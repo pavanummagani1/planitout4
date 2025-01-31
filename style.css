@@ -354,7 +354,7 @@ body {
     display: none;
     position: fixed;
     top: 120px;
-    right: 20px;
+    left: 20px;
     z-index: 999;
 }
 
@@ -362,12 +362,33 @@ body {
     font-size: 2rem;
     display: none;
 }
-
 .sidebar {
-    display: none;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 60px; /* Adjust as per navbar height */
+    right: 0;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show Sidebar */
+.sidebar.show {
+    display: flex;
+}
+
+.sidebar{
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 10px;
+}
+.sidebar button{
+    padding: 10px;
+    width: 70%;
 }
 
 
@@ -404,7 +425,7 @@ body {
     }
 
     .sidebar {
-        /* display: flex; */
+        display: none;
         position: absolute;
         /* background-color: #333; */
         height: 100vh;
@@ -427,7 +448,7 @@ body {
         display: flex;
         flex-direction: column;
         /* align-items: center; */
-        width: 100%;
+        width: 80%;
     }
     #locationNames, #hotelNames, #restaurantNames{
         display: flex;

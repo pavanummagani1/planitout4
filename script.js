@@ -207,6 +207,6 @@ function loginAlert(){
     },3000)
 }
 function onclickHamburger() {
-    let sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = sidebar.style.display === 'flex' ? 'none' : 'flex';
+    let sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
 }
