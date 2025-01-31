@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Css link -->
+    <link rel="stylesheet" href="./style.css">
+    <title>dashboard</title>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="main_section">
+        <!-- Navbar Section -->
+        <nav>
+            <a href="" class="logo">Plan it out</a>
+            <ul>
+                <li><a href="#locationsContainer" class="active">Home</a></li>
+                <li><a href="#footer">About</a></li>
+                <li><a href="/destinations">CheckList</a></li>
+                <li><a href="/blog">Plan a trip</a></li>
+                <li><a href="/gallery">Profile</a></li>
+            </ul>
+        </nav>
+        <!-- Carousel Section -->
+        <div class="hero_section" id="heroSection">
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- Video tag section -->
+                        <video type="video/mp4" autoplay loop muted plays-inline class="carousel_video">
+                            <source src="../images/Bike.mp4">
+                        </video>
+                        <!-- Content Section -->
+                        <div class="hero_content_section">
+                            <div class="hero_data" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                                data-aos-delay="200">
+                                <div class="hero_tag" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                                    data-aos-delay="500">
+                                    <div class="circle"></div>
+                                    SOLO TRAVELLER
+                                </div>
+                                <h1 class="hero_title" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                                    data-aos-delay="900">Go & Explore World</h1>
+                                <p class="hero_desc" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                                    data-aos-delay="1300">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos tenetur officia
+                                    temporibus rem aspernatur molestiae consequatur recusandae sed dolore. Lorem ipsum
+                                    dolor, sit amet consectetur adipisicing elit. Voluptatum, optio? Quasi magni impedit
+                                    nam ex quos fugiat voluptas at eos!
+                                </p>
+                                <button class="explore_btn" data-aos="fade-right" data-aos-easing="ease-in-sine"
+                                    data-aos-delay="1700">Explore Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Video tag section -->
+                        <video type="video/mp4" autoplay loop muted plays-inline class="carousel_video">
+                            <source src="../images/food.mp4">
+                        </video>
+                        <!-- Content Section -->
+                        <div class="hero_content_section">
+                            <div class="hero_data">
+                                <div class="hero_tag">
+                                    <div class="circle"></div>
+                                    Food Experience
+                                </div>
+                                <h1 class="hero_title">Go & Explore Food</h1>
+                                <p class="hero_desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos tenetur officia
+                                    temporibus rem aspernatur molestiae consequatur recusandae sed dolore. Lorem ipsum
+                                    dolor, sit amet consectetur adipisicing elit. Voluptatum, optio? Quasi magni impedit
+                                    nam ex quos fugiat voluptas at eos!
+                                </p>
+                                <button class="explore_btn">Explore Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Video tag section -->
+                        <video type="video/mp4" autoplay loop muted plays-inline class="carousel_video">
+                            <source src="../images/hotel.mp4">
+                        </video>
+                        <!-- Content Section -->
+                        <div class="hero_content_section">
+                            <div class="hero_data">
+                                <div class="hero_tag">
+                                    <div class="circle"></div>
+                                    Boating Experience
+                                </div>
+                                <h1 class="hero_title">Experience the Best Hotels</h1>
+                                <p class="hero_desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos tenetur officia
+                                    temporibus rem aspernatur molestiae consequatur recusandae sed dolore. Lorem ipsum
+                                    dolor, sit amet consectetur adipisicing elit. Voluptatum, optio? Quasi magni impedit
+                                    nam ex quos fugiat voluptas at eos!
+                                </p>
+                                <button class="explore_btn">Explore Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+            </div>
+        </div>
+        <!-- Carousel Indicator Section -->
+        <div class="hero_carousel_indicator">
+            <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../images/C1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/C2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/C3.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="locations-container" id="locationsContainer">
+        <span class="locations-title">We are Available @ Locations</span>
+        <div class="locations" id="locations"></div>
+    </div>
+
+    <div class="popular-container">
+        <span>POPULAR RESTAURANTS</span>
+        <div id="restaurantNames"></div>
+        <div id="restaurants"></div>
+    </div>
+
+    <div class="popular-container">
+        <span>POPULAR HOTELS</span>
+        <div id="hotelNames"></div>
+        <div id="hotels"></div>
+    </div>
+
+    <div class="popular-container">
+        <span>POPULAR LOCATIONS</span>
+        <div id="locationNames"></div>
+        <div id="popularLocations"></div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="about-container">
+            <div class="section">
+                <span class="about-title">Why Planning It Out?</span>
+                <span class="about-desc">MakeMyTrip has been a pioneer in the travel industry since 2000, providing
+                    excellent offers, airfares, discounts, and a seamless booking experience. Whether booking flights,
+                    hotels, or holiday packages, our platform is designed to make travel easy and affordable for
+                    everyone.</span>
+            </div>
+            <div class="section">
+                <span class="about-title">Find Great Restaurants</span>
+                <span class="about-desc">Looking for great food? Plan your travel with MakeMyTrip and explore the best
+                    restaurants with great deals, discounts, and more. We cater to your culinary cravings wherever you
+                    go.</span>
+            </div>
+            <div class="section">
+                <span class="about-title">Book Hotels with Plan it Out</span>
+                <span class="about-desc">Book affordable hotels with us. We offer exclusive discounts, competitive
+                    prices, and instant booking confirmations. Your comfort is our priority.</span>
+            </div>
+        </div>
+
+        <div class="social-media-container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://x.com/i/flow/login?mx=2" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+            <div class="copyrights-container">
+                <span class="copyright">© 2025 Plan It Out PVT.LTD.</span>
+                <span class="locations">Country: India, Locations: HYD, BEN, MUM, DEL, CHE</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <div class="loader"></div> -->
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 2,
+            slidesPerView: 6,
+            freeMode: true,
+            watchSlidesProgress: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: true,
+            },
+        });
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 2,
+            effect: "fade",
+            autoplay: {
+                delay: 8000,
+                disableOnInteraction: true,
+            },
+            // navigation: {
+            //     nextEl: ".swiper-button-next",
+            //     prevEl: ".swiper-button-prev",
+            // },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+
+
+    <!-- AOS Animation JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS Animation Initializer -->
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
